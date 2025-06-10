@@ -410,98 +410,149 @@ input {
 }
 
 /*=============== ABOUT ===============*/
-.about__data {
-  text-align: center;
+.about__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 4rem 2rem;
 }
 
-.about__container {
-  row-gap: 2.5rem;
+.about__text {
+  flex: 1;
+  text-align: left;
+}
+
+.about__subtitle {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.about__title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem 0;
+}
+
+.about__data {
+  flex: 2;
+  text-align: left;
 }
 
 .about__description {
-  margin-bottom: var(--mb-2);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
 }
 
-.about__img {
-  display: flex;
-  column-gap: 1rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.about__img-overlay {
-  overflow: var(--img-hidden);
-}
-
-.about__img-one {
-  width: 130px;
-}
-
-.about__img-two {
-  width: 180px;
-}
-
-.about__img-one,
-.about__img-two {
-  transition: var(--img-transition);
-}
-
-.about__img-one:hover,
-.about__img-two:hover {
-  transform: var(--img-scale);
-}
-
-/*=============== DISCOVER ===============*/
-.discover__card {
-  position: relative;
-  width: 200px;
-  overflow: var(--img-hidden);
-}
-
-.discover__data {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1rem;
-}
-
-.discover__title,
-.discover__description {
-  color: var(--white-color);
-}
-
-.discover__title {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-25);
-}
-
-.discover__description {
-  display: block;
-  font-size: var(--smaller-font-size);
-}
-
-.discover__img {
-  width: 300%;
-  height: 300%;
-  object-fit: cover;
-  transition: var(--img-transition);
-}
-
-.discover__img:hover {
-  transform: var(--img-scale);
-}
-
-.swiper-container-3d .swiper-slide-shadow-left,
-.swiper-container-3d .swiper-slide-shadow-right {
-  background-image: none;
-}
-
-.discover-button-container {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.discover-button-container .button {
+.btn {
   display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+/*=============== OUR SKILLS ===============*/
+.skills {
+  padding: 4rem 0;
+  background-color: #f9f9f9; /* sesuai gambar */
+}
+
+.skills__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.skills__text {
+  max-width: 50%;
+}
+
+.skills__subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #000;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.skills__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.skills__description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.skills__list {
+  max-width: 40%;
+}
+
+.skills__list p {
+  font-size: 1.1rem;
+  margin: 0.75rem 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.skills__list hr {
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+/*=============== TEAM ===============*/
+.team {
+  padding: 4rem 0;
+  background-color: #f5f5f5; /* abu muda mirip desainnya */
+  text-align: center;
+}
+
+.team__subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+.team__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.team__description {
+  font-size: 1rem;
+  color: #a0a0a0;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.team__img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /*=============== EXPERIENCE ===============*/
@@ -713,63 +764,6 @@ input {
   transition: var(--img-transition);
 }
 
-/*=============== consultation ===============*/
-.consultation-section {
-  /* Background image - ganti URL dengan gambar Anda */
-  background-image: url(""assets/img/img1.png"");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  /* Overlay gelap agar teks tetap terbaca (opsional) */
-  background-color: rgba(117, 117, 117, 0.7);
-  background-blend-mode: overlay;
-
-  color: white;
-  padding: 100px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  height: 100vh;
-}
-
-.consultation-container {
-  max-width: 400px;
-  margin-left: 40%;
-  /* Tambahan: background semi-transparan untuk kontras teks (opsional) */
-  /* background-color: rgba(0, 0, 0, 0.3); */
-  /* padding: 30px; */
-  /* border-radius: 10px; */
-}
-
-.consultation-subtitle {
-  font-size: 2.5rem;
-  font-weight: 300;
-  letter-spacing: 2px;
-  margin: 0;
-}
-
-.consultation-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin: 10px 0 30px 0;
-}
-
-.consultation-button {
-  display: inline-block;
-  background-color: white;
-  color: black;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 12px 24px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-.consultation-button:hover {
-  background-color: #e0e0e0;
-}
 /*=============== FOOTER ===============*/
 .footer__container {
   row-gap: 5rem;
@@ -1124,7 +1118,7 @@ input {
   }
 }
 
-/*=============== WHATSAPP ===============*/
+/*=============== WHATSAPP FLOAT BUTTON ===============*/
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
