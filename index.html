@@ -23,7 +23,10 @@
   <body>
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav__logo">RUKI.ID</a>
+        <a href="#" class="nav__logo">
+          <img src="assets/img/removelogo.png" alt="RUKI Logo" style="height: 40px;" />
+        </a>
+
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
@@ -33,14 +36,23 @@
             <li class="nav__item">
               <a href="about.html" class="nav__link">ABOUT</a>
             </li>
-            <li class="nav__item">
-              <a href="discover.html" class="nav__link">DISCOVER</a>
+            <li class="nav__item nav__dropdown">
+            <button class="dropdown__toggle nav__link">
+              SERVICES <span class="dropdown__arrow">▾</span>
+            </button>
+         <ul class="dropdown__menu">
+                <li><a href="land.html" class="dropdown__link">Land</a></li>
+                <li><a href="architecture.html" class="dropdown__link">Architecture</a></li>
+                <li><a href="construction.html" class="dropdown__link">Construction</a></li>
+                <li><a href="furniture.html" class="dropdown__link">Furniture</a></li>
+                <li><a href="villa-management.html" class="dropdown__link">Villa Management</a></li>
+           </ul>
+          </li
+              class="nav__item">
+              <a href="contact.html" class="nav__link">CONTACT</a>
             </li>
             <li class="nav__item">
-              <a href="#place" class="nav__link">PLACES</a>
-            </li>
-            <li class="nav__item">
-              <a href="#place" class="nav__link">PORTFOLIO</a>
+              <a href="portofolio.html" class="nav__link">PORTFOLIO</a>
             </li>
           </ul>
 
@@ -77,6 +89,7 @@
             </h1>
             <a href="#" class="button">Explore</a>
           </div>
+
 
           <div class="home__social">
             <a
@@ -201,58 +214,50 @@
       </section>
 
       <!--==================== EXPERIENCE ====================-->
-      <section class="experience section">
-        <h2 class="section__title">
-          With Our Experience <br />
-          We Will Serve You
-        </h2>
+   <section class="timeline__container">
+  <!-- STEP 1 -->
+  <div class="timeline__item left">
+    <div class="timeline__dot"></div>
+    <div class="timeline__content">
+      <span class="timeline__step">STEP 1</span>
+      <h3 class="timeline__title">Choose Your Ideal Property</h3>
+      <p class="timeline__description">Find the perfect unit from our premium collection that suits your vision and investment goals.</p>
+    </div>
+  </div>
 
-        <div class="experience__container container grid">
-          <div class="experience__content grid">
-            <div class="experience__data">
-              <h2 class="experience__number">20</h2>
-              <span class="experience__description"
-                >Year <br />
-                Experience</span
-              >
-            </div>
+  <!-- STEP 2 -->
+  <div class="timeline__item right">
+    <div class="timeline__dot"></div>
+    <div class="timeline__content">
+      <span class="timeline__step">STEP 2</span>
+      <h3 class="timeline__title">Secure with Initial Deposit</h3>
+      <p class="timeline__description">With an initial deposit of just 20% ensures it’s exclusively yours.</p>
+    </div>
+  </div>
 
-            <div class="experience__data">
-              <h2 class="experience__number">75</h2>
-              <span class="experience__description"
-                >Complete <br />
-                tours</span
-              >
-            </div>
+  <!-- STEP 3 -->
+  <div class="timeline__item left">
+    <div class="timeline__dot"></div>
+    <div class="timeline__content">
+      <span class="timeline__step">STEP 3</span>
+      <h3 class="timeline__title">Spread Payments Across Construction</h3>
+      <p class="timeline__description">Comfortably manage your investment with 4 × payments during construction progress.</p>
+    </div>
+  </div>
 
-            <div class="experience__data">
-              <h2 class="experience__number">650+</h2>
-              <span class="experience__description"
-                >Tourist <br />
-                Destination</span
-              >
-            </div>
-          </div>
+  <!-- STEP 4 -->
+  <div class="timeline__item right">
+    <div class="timeline__dot"></div>
+    <div class="timeline__content">
+      <span class="timeline__step">STEP 4</span>
+      <h3 class="timeline__title">Receive Your Property</h3>
+      <p class="timeline__description">Get the keys to your new property and start your investment journey with confidence.</p>
+    </div>
+  </div>
+</section>
 
-          <div class="experience__img grid">
-            <div class="experience__overlay">
-              <img
-                src="assets/img/experience1.jpg"
-                alt=""
-                class="experience__img-one"
-              />
-            </div>
 
-            <div class="experience__overlay">
-              <img
-                src="assets/img/experience2.jpg"
-                alt=""
-                class="experience__img-two"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       <!--==================== VIDEO ====================-->
       <section class="video section">
@@ -538,7 +543,7 @@
                 <i class="ri-twitter-fill"></i>
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/ruki.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 class="footer__social"
               >
@@ -594,7 +599,7 @@
                 <a href="" class="footer__link">Support Center</a>
               </li>
               <li class="footer__item">
-                <a href="" class="footer__link">Contact Us</a>
+                <a href="contact.html" class="footer__link">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -602,7 +607,7 @@
 
         <div class="footer__rights">
           <p class="footer__copy">
-            &#169; 2021 Bedimcode. All rigths reserved.
+            &#169; 2025 Rukitecture. All rights reserved. <br />
           </p>
           <div class="footer__terms">
             <a href="#" class="footer__terms-link">Terms & Agreements</a>
@@ -625,6 +630,9 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+    <script src="timeline.js"></script>
+
+
 
     <a
       href="https://wa.me/6281234567890"
