@@ -540,57 +540,33 @@ input {
 }
 
 /*=============== ABOUT ===============*/
-.about__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 3rem;
-  padding: 4rem 2rem;
+.about__map {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.about__text {
-  flex: 1;
-  text-align: left;
-}
-
-.about__subtitle {
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 2px;
-  margin: 0;
-}
-
-.about__title {
-  font-size: 3rem;
-  font-weight: 800;
-  margin: 0 0 1.5rem 0;
-}
-
-.about__data {
-  flex: 2;
-  text-align: left;
-}
-
-.about__description {
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-}
-
-.btn {
+.about__map-link {
   display: inline-block;
-  background-color: black;
-  color: white;
-  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
-  border-radius: 8px;
   transition: background 0.3s ease;
 }
 
-.btn:hover {
+.about__map-link:hover {
   background-color: #333;
 }
+
+
 
 
 /*=============== GALLERY ===============*/
