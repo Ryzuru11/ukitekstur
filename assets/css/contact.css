@@ -540,30 +540,93 @@ input {
 }
 
 /*=============== ABOUT ===============*/
+/* Section background & spacing */
+.about {
+  background: linear-gradient(to right, #f7f9fc, #eaf1f9);
+  padding: 4rem 2rem;
+  border-radius: 12px;
+}
+
+@keyframes floatJump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.location__icon {
+  width: 70px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  animation: floatJump 2s ease-in-out infinite;
+}
+
+
+/* Deskripsi singkat */
+.about__note {
+  font-style: italic;
+  color: #555;
+  margin-top: 1rem;
+}
+
+/* Map container animasi */
 .about__map {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
   margin-top: 2rem;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.about__map-link {
+/* Tombol Google Maps */
+.btn-map {
   display: inline-block;
-  margin-top: 1rem;
-  background-color: #000;
+  background-color: #1a73e8;
   color: #fff;
-  padding: 0.5rem 1.25rem;
-  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
   text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.about__map-link:hover {
-  background-color: #333;
+.btn-map:hover {
+  background-color: #0c5cd8;
+}
+
+/* Fade in effect */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .about__container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about__title, .about__subtitle, .about__note {
+    text-align: center;
+  }
+
+  .btn-map {
+    display: block;
+    margin: 1rem auto 0;
+  }
 }
 
 
